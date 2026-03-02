@@ -1,0 +1,45 @@
+```yaml
+# Core business goals
+goals:
+  target_aov: 1000
+  max_cpa: 600
+  min_roas_for_scale: 2.0
+
+# Execution mode
+automation:
+  review_mode: true
+  enable_immediate_kill: true
+  enable_auto_pause_48h_rule: false
+  enable_auto_scale: false
+
+# Decision thresholds
+thresholds:
+  desired_cpa: 600
+  kill_spend_multiple_of_desired_cpa: 2.5
+  kill_roas_below: 1.0
+  pause_cpa_multiple_of_target: 3.0
+  pause_duration_hours: 48
+
+# Scaling constraints
+scaling:
+  min_conversions_3d: 3
+  min_spend_3d: 1500
+  budget_increase_pct_default: 15
+  budget_increase_pct_max: 25
+  cooldown_hours_after_budget_change: 24
+
+# Fatigue signal tuning
+fatigue:
+  frequency_warn: 2.5
+  frequency_high: 3.0
+  ctr_drop_pct_warn: 20
+  cpc_rise_pct_warn: 20
+
+# Page monitoring
+page_monitoring:
+  enabled: true
+  detect_change_vs_days: 7
+  alert_on_cvr_drop_pct: 20
+  alert_on_bounce_rise_pct: 20
+
+```
